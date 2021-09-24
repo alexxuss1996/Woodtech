@@ -1,9 +1,9 @@
 {
   "name": "woodtech",
   "version": "1.0.0",
-  "description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+  "description": "Wood furniture store site",
+  "author": "Olexiy Mel'nychuk",
   "main": "index.js",
-  "author": "WebDesign Master",
   "type": "module",
   "browserslist": [
     "last 10 versions"

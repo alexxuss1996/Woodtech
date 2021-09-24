@@ -5,15 +5,11 @@ $accent: orange;
 $fontsize: 16px; // Body Font Size
 $textcolor: #333;
 $lineheight: 1.65;
-$userfont: Arial, sans-serif;
+$userfont: 'Raleway', sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
-// Bootstrap compatible gutter variable => $gutter
-$grid-gutter-width: 30px;
-$gutter: $grid-gutter-width;
-
 // IMPORT SECTION
-
+@import 'customize_bootstrap.scss';
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
