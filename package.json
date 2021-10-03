@@ -43,7 +43,9 @@
     "webpack": "^5.51.1",
     "webpack-stream": "^7.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^7.0.6"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/alexxuss1996/woodtech.git"

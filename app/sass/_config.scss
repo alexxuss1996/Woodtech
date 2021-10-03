@@ -1,9 +1,18 @@
 // USER VARIABLES SECTION
-
-$accent: orange;
-
+  // colors
+$accent: #F88500;
+$dark: #202328;
+$deep-dark: #171A1A;
+$text-color: #333;
+$dark-div: #2D3038;
+$light-bg: #FAFAFA;
+$light-disabled: #E4E6E8;
+$light-div: #E7E7E8;
+$middle-gray:  rgba(#6F7A8B, 0.75);
+$alt-gray: #C4C4C4;
+$text-light-color: #999;
+  // Text
 $fontsize: 16px; // Body Font Size
-$textcolor: #333;
 $lineheight: 1.65;
 $userfont: 'Raleway', sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
@@ -13,7 +22,8 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
-@import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
+// @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
+@import 'node_modules/swiper/swiper-bundle';
 
 // FONTS LOAD SECTION
 
@@ -58,7 +68,7 @@ body {
   font-family: $userfont;
   font-size: $fontsize;
   line-height: $lineheight;
-  color: $textcolor;
+  color: $text-color;
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
