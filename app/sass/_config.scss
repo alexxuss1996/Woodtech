@@ -5,6 +5,7 @@ $dark: #202328;
 $deep-dark: #171A1A;
 $text-color: #333;
 $dark-div: #2D3038;
+$dark-header: #6F7A8B;
 $light-bg: #FAFAFA;
 $light-disabled: #E4E6E8;
 $light-div: #E7E7E8;
@@ -68,7 +69,7 @@ body {
   font-family: $userfont;
   font-size: $fontsize;
   line-height: $lineheight;
-  color: $text-color;
+  color: $text-light-color;
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
