@@ -354,9 +354,11 @@ section, footer {
 	.bestworks__items {
 		position: relative;
 		.bestworks__item {
+			background-color: #FFF;
 			border-bottom: 3px solid $light-disabled;
 			transition: all 0.3s ease;
-			margin-bottom: 20px;
+			height: 100%;
+			margin-bottom: 25px;
 			&:hover {
 				border-bottom: 3px solid $accent;
 			}
@@ -367,7 +369,8 @@ section, footer {
 				height: auto;
 			}
 			.bestworks-item__content {
-				padding: 25px 30px;
+				align-self: flex-end;
+				padding: 25px 30px 0;
 				width: 100%;
 				background-color: #FFF;
 				.bestworks-item__location {
@@ -402,12 +405,12 @@ section, footer {
 
 				.bestworks-item-decoration__dots {
 					width: 8px;
-					height: 100%;
+					height: 35px;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
 					position: relative;
-					align-self: center;
+					align-items: center;
 					margin-right: 10px;
 					.bestworks-item-decoration__dot {
 						width: 5px;
@@ -416,10 +419,6 @@ section, footer {
 						transition: all 0.3s ease;
 						background-color: $light-disabled;
 						border-radius: 50%;
-						margin-bottom: 12px;
-						&:last-child {
-							margin-bottom: 0;
-						}
 					}
 				}
 				.bestworks-item__link {
@@ -436,7 +435,7 @@ section, footer {
 			justify-content: center;
 			position: relative;
 			width: 100%;
-			margin-top: 20px;
+			margin-top: 3%;
 		}
 	}
 }
