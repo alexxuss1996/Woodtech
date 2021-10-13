@@ -1,30 +1,30 @@
 // USER VARIABLES SECTION
-  // colors
-$accent: #F88500;
+// colors
+$accent: #f88500;
 $dark: #202328;
-$deep-dark: #171A1A;
+$deep-dark: #171a1a;
 $text-color: #333;
-$dark-div: #2D3038;
-$dark-header: #6F7A8B;
-$light-bg: #FAFAFA;
-$light-disabled: #E4E6E8;
-$light-div: #E7E7E8;
-$middle-gray:  rgba(#6F7A8B, 0.75);
-$alt-gray: #C4C4C4;
+$dark-div: #2d3038;
+$dark-header: #6f7a8b;
+$light-bg: #fafafa;
+$light-disabled: #e4e6e8;
+$light-div: #e7e7e8;
+$middle-gray: rgba(#6f7a8b, 0.75);
+$alt-gray: #c4c4c4;
 $text-light-color: #999;
-  // Text
+// Text
 $fontsize: 16px; // Body Font Size
 $lineheight: 1.65;
-$userfont: 'Raleway', sans-serif;
+$userfont: "Raleway", sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
 // IMPORT SECTION
-@import 'customize_bootstrap.scss';
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
-@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+@import "customize_bootstrap.scss";
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-grid.scss"; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss'; // Optional Bootstrap Utilites
-@import 'node_modules/swiper/swiper-bundle';
+@import "node_modules/swiper/swiper-bundle";
 
 // FONTS LOAD SECTION
 
@@ -53,7 +53,8 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
 
   &:focus:required:invalid {
