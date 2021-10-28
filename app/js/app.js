@@ -28,7 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
 				return `<span class='pagination-current'>${currentNum}</span><span class='pagination-total'>${totalNum}</span>`;
 			 },
 		}
-
 	})
 
+	const replaceSvgImagesToSvgInline = (query, callback) => {
+		document.querySelectorAll(query).forEach((image) => {
+			let imgClass = image.getAttribute('class');
+			let imgId = image.getAttribute('id');
+			let imgURL = image.getAttribute('src');
+	
+			fetch(imgURL)
+			.then(res => res.text())
+			.then(data => {
+				const parser = new DOMParser();
+				let svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+				if(typeof imgClass !== 'undefined') {
+					svg.setAttribute('class', `${imgClass} replaced-svg`);
+					svg.setAttribute('id', imgId);
+				}
+				svg.removeAttribute('xmlns:a');
+				if(!svg.getAttribute('viewBox') && svg.getAttribute('height') && svg.getAttribute('width')) {
+					svg.setAttribute('viewBox', `0 0 ${svg.getAttribute('height')} ${svg.getAttribute('width')}`);
+				}
+				image.parentNode.replaceChild(svg, image);
+			})
+			.then(callback)
+			.catch(error => console.error(error));
+		});
+	}
+	
+	replaceSvgImagesToSvgInline('.svg-icon');
 })
