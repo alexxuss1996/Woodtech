@@ -53,7 +53,7 @@ img {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.heading__secondary-title {
+.heading__bold-title {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 29px;
@@ -386,7 +386,7 @@ img {
     }
     .bestworks__heading {
       padding-left: 3%;
-      .heading__secondary-title {
+      .heading__bold-title {
         color: #fff;
       }
     }
@@ -533,7 +533,7 @@ img {
   .about__articles {
     color: $text-color;
     .articles__heading {
-      .heading__secondary-title {
+      .heading__bold-title {
         color: $text-color;
       }
     }
@@ -588,6 +588,66 @@ img {
         width: 40px;
         height: auto;
       }
+    }
+  }
+}
+
+/*------------------Partners Section------------------*/
+
+.s-partners {
+  padding: 0;
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .partners__overlay {
+    padding: 4% 0;
+    height: 100%;
+    text-align: center;
+    background-color: rgba($dark, 0.9);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .partners-item__container {
+    margin-top: 20px;
+  }
+  .partner__item {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .partner__logo {
+    margin: 0 auto;
+    justify-self: center;
+  }
+  .partner__logo[alt="milano"] {
+    width: 100px;
+  }
+  .partner__logo[alt="mazzucato"] {
+    width: 160px;
+  }
+  .partner__logo[alt="fanfani"] {
+    width: 156px;
+  }
+  .partner__logo[alt="cappelini"] {
+    width: 80px;
+  }
+  .partner__description {
+    font-weight: 400;
+    font-size: 14px;
+    justify-self: flex-end;
+    margin-bottom: 0;
+    padding-top: 10px;
+    .partner__brand {
+      color: $accent;
+      font-weight: 800;
     }
   }
 }
