@@ -18,6 +18,10 @@ $lineheight: 1.65;
 $userfont: "Raleway", sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
+// Corners
+$corner-thickness: 1px;
+$corner-width: 10px;
+$corner-height: 10px;
 // IMPORT SECTION
 @import "customize_bootstrap.scss";
 @import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
