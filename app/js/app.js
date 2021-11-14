@@ -1,6 +1,6 @@
 import {Swiper, Pagination, Navigation, Scrollbar} from 'swiper';
 
-Swiper.use([Pagination, Navigation, Scrollbar]);
+Swiper.use([Pagination, Navigation, Scrollbar, F]);
 document.addEventListener('DOMContentLoaded', () => {
 
 	const homeHeaderSlider = new Swiper('.home-header__slider', {
@@ -28,7 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
 				return `<span class='pagination-current'>${currentNum}</span><span class='pagination-total'>${totalNum}</span>`;
 			 },
 		}
-	})
+	});
+
+	const homeBlogSlider = new Swiper('.home-blog__slider', {
+		loop: true,
+		speed: 1500,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		effect: 'fade',
+		breakpoints: {
+			991: {
+				slidesPerView: 3
+			}
+		},
+		pagination: {
+			el: '.blog-slider__pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	});
 
 	const replaceSvgImagesToSvgInline = (query, callback) => {
 		document.querySelectorAll(query).forEach((image) => {
