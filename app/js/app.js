@@ -1,6 +1,6 @@
 import {Swiper, Pagination, Navigation, Scrollbar} from 'swiper';
 
-Swiper.use([Pagination, Navigation, Scrollbar, F]);
+Swiper.use([Pagination, Navigation, Scrollbar]);
 document.addEventListener('DOMContentLoaded', () => {
 
 	const homeHeaderSlider = new Swiper('.home-header__slider', {
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		speed: 1500,
 		slidesPerView: 1,
 		spaceBetween: 20,
-		effect: 'fade',
 		breakpoints: {
 			991: {
 				slidesPerView: 3
