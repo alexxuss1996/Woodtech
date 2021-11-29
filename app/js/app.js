@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+
+	
+
 	const replaceSvgImagesToSvgInline = (query, callback) => {
 		document.querySelectorAll(query).forEach((image) => {
 			let imgClass = image.getAttribute('class');
@@ -74,4 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	replaceSvgImagesToSvgInline('.svg-icon');
+
+
+	// Scroll to top button
+
+	const scrollBtn = document.querySelector(".scroll-top__btn");
+	const offset = 300;
+	
+	window.addEventListener("scroll", () => {
+		if(window.pageYOffset >= offset) {
+			scrollBtn.classList.add("active")
+		} else {
+			scrollBtn.classList.remove("active")
+		}
+	})
+	scrollBtn.addEventListener("click", () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		})
+	})
 })

@@ -29,24 +29,39 @@
 		
 		<div class="header-topline-wrapper">
 			<div class="container">
-				<nav class="header__navbar">
-					<a href="#" class="header__logo">
-						<img src="images/dist/logo-white.svg" alt="Logo">
-					</a>
-					<ul class="navbar__menu">
-						<li><a href="#" class="navbar-menu__link">Главная</a></li>
-						<li><a href="#" class="navbar-menu__link">Проекты</a></li>
-						<li><a href="#" class="navbar-menu__link">Услуги</a></li>
-						<li><a href="#" class="navbar-menu__link">Блог</a></li>
-						<li><a href="#" class="navbar-menu__link">Компания</a></li>
-					</ul>
-					<ul class="navbar__social">
-						<li><a href="https://instagram.com/" class="social__link"><span class="fab fa-instagram"></span></a></li>
-						<li><a href="https://vk.com/" class="social__link"><span class="fab fa-vk"></span></a></li>
-						<li><a href="https://facebook.com/" class="social__link"><span class="fab fa-facebook"></span></a></li>
-						<li><a href="https://twitter.com/" class="social__link"><span class="fab fa-twitter"></span></a></li>
-					</ul>
-				</nav>
+				<div class="row">
+					<div class="col-lg-3">
+
+						<div class="logo">
+							<a href="#" class="logo__link">
+								<i class="logo__icon"></i>
+								Woodtech 
+								<span>Architecture</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<nav class="header__navbar">
+							<ul class="navbar__menu">
+								<li><a href="#" class="navbar-menu__link">Главная</a></li>
+								<li><a href="#" class="navbar-menu__link">Проекты</a></li>
+								<li><a href="#" class="navbar-menu__link">Услуги</a></li>
+								<li><a href="#" class="navbar-menu__link">Блог</a></li>
+								<li><a href="#" class="navbar-menu__link">Компания</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="col-lg-3">
+						<ul class="navbar__social">
+							<li><a href="https://instagram.com/" class="social__link"><span class="fab fa-instagram"></span></a></li>
+							<li><a href="https://vk.com/" class="social__link"><span class="fab fa-vk"></span></a></li>
+							<li><a href="https://facebook.com/" class="social__link"><span class="fab fa-facebook"></span></a></li>
+							<li><a href="https://twitter.com/" class="social__link"><span class="fab fa-twitter"></span></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		
@@ -279,14 +294,14 @@
 			<div class="swiper-wrapper">
 				<article class="blog-slider__item swiper-slide">
 					<img src="images/dist/portfolio/stairs-1.jpg" alt="Blog Item" class="blog-item__image">
-					<time datetime="07-02-2021" class="item__date">2 июля</time>
+					<time datetime="2021-07-02" class="item__date">2 июля</time>
 					<h3 class="item__title">Построили замечательную деревянную лестницу</h3>
 					<p class="blog-item__description">Один из самых необыкновенных проектов нашей компании - винтовая деревянная лестница в старинном стиле.</p>
 					<a href="#" class="read-more__link">Читать полностью</a>
 				</article>
 				<article class="blog-slider__item swiper-slide">
 					<img src="images/dist/portfolio/interior-7.jpg" alt="Blog Item" class="blog-item__image">
-					<time datetime="08-08-2021" class="item__date">8 апреля</time>
+					<time datetime="2021-08-08" class="item__date">8 апреля</time>
 					<h3 class="item__title">Создание деревянной футуристической спальни</h3>
 					<p class="blog-item__description">Создание уникальнейшего проекта - деревянной спальни в футуристичком стиле заняло у команды Woodtech два месяца.</p>
 					<a href="#" class="read-more__link">Читать полностью</a>
@@ -303,5 +318,58 @@
 		</div>
 	</div>
 </section>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-12">
+			
+				<div class="logo">
+					<a href="#" class="logo__link">
+						<i class="logo__icon"></i>
+						Woodtech 
+						<span>Architecture</span>
+					</a>
+				</div>
+
+				<h2 class="category__title">Коротко о нас</h2>
+				<p class="bottom-description">
+					Мы досконально прорабатываем, а затем обсуждаем с нашими клиентами внешний вид каждого изделия. Мы крайне редко повторяемся, ведь мы знаем, что вы цените индивидуальность и не готовы довольствоваться готовыми решениями.
+				</p>
+			</div>
+			<div class="col-lg-2 col-md-6 col-sm-12">
+				<h2 class="category__title bt-line-decored">Меню</h2>
+				<ul class="bottom__nav">
+					<li><a href="#" class="bottom-menu__link">Главная</a></li>
+					<li><a href="#" class="bottom-menu__link">Проекты</a></li>
+					<li><a href="#" class="bottom-menu__link">Услуги</a></li>
+					<li><a href="#" class="bottom-menu__link">Блог</a></li>
+					<li><a href="#" class="bottom-menu__link">Компания</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12">
+				<h2 class="category__title bt-line-decored">Услуги</h2>
+				<ul class="bottom__nav">
+					<li><a href="#" class="bottom-menu__link">Дизайн интерьера</a></li>
+					<li><a href="#" class="bottom-menu__link">Проектирование</a></li>
+					<li><a href="#" class="bottom-menu__link">Поставка дерева</a></li>
+					<li><a href="#" class="bottom-menu__link">Ремонт</a></li>
+					<li><a href="#" class="bottom-menu__link">Концепт</a></li>
+					<li><a href="#" class="bottom-menu__link">Выезд мастера</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-12">
+				<h2 class="category__title bt-line-decored">Мы в соц. сетях</h2>
+				<p class="bottom-description">Подпишитесь на нас в социальных сетях, чтобы не пропустить выход новых невероятных проектов, разработанных для наших клиентов по всему миру.</p>
+				<ul class="bottom__socials">
+					<li><a  href="https://instagram.com" class="bottom-socials__link"><span class="fab fa-instagram"></span></a></li>
+					<li><a  href="https://vk.com" class="bottom-socials__link"><span class="fab fa-vk"></span></a></li>
+					<li><a  href="https://facebook.com" class="bottom-socials__link"><span class="fab fa-facebook"></span></a></li>
+					<li><a  href="https://twitter.com" class="bottom-socials__link"><span class="fab fa-twitter"></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<a class="scroll-top__btn"><span class="fas fa-chevron-up"></span></a>
 
 <!--#include virtual="/parts/bottom.html" -->
