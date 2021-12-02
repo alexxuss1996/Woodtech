@@ -47,8 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
+	// Adaptive menu 
+	const hamburger = document.querySelector(".hamburger");
+	const homeNavbarMenu = document.querySelector(".navbar__menu");
+	const navLinks = document.querySelectorAll(".navbar-menu__link");
+	navLinks.forEach(n => n.addEventListener("click", closeMenu))
+	hamburger.addEventListener("click", mobileMenu)
+	window.addEventListener("click", function(e){
+		if(e.target !== homeNavbarMenu && e.target !== hamburger) {
+			closeMenu();
+		}
 
+	})
+
+	function closeMenu() {
+		hamburger.classList.remove("open");
+		homeNavbarMenu.classList.remove("open");
+	}
 	
+	function mobileMenu() { 
+		hamburger.classList.toggle("open");
+		homeNavbarMenu.classList.toggle("open");
+	 }
 
 	const replaceSvgImagesToSvgInline = (query, callback) => {
 		document.querySelectorAll(query).forEach((image) => {
