@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Adaptive menu 
 	const hamburger = document.querySelector(".hamburger");
 	const homeNavbarMenu = document.querySelector(".navbar__menu");
+
 	const navLinks = document.querySelectorAll(".navbar-menu__link");
 	navLinks.forEach(n => n.addEventListener("click", closeMenu))
-	hamburger.addEventListener("click", mobileMenu)
+	hamburger.addEventListener("click", toggleMenu)
 	window.addEventListener("click", function(e){
 		if(e.target !== homeNavbarMenu && e.target !== hamburger) {
 			closeMenu();
 		}
-
 	})
 
 	function closeMenu() {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		homeNavbarMenu.classList.remove("open");
 	}
 	
-	function mobileMenu() { 
+	function toggleMenu() { 
 		hamburger.classList.toggle("open");
 		homeNavbarMenu.classList.toggle("open");
 	 }
