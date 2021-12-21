@@ -1,8 +1,8 @@
 import {Swiper, Pagination, Navigation, Scrollbar} from 'swiper';
-
+import MicroModal from 'micromodal';
 Swiper.use([Pagination, Navigation, Scrollbar]);
 document.addEventListener('DOMContentLoaded', () => {
-
+// Sliders
 	const homeHeaderSlider = new Swiper('.home-header__slider', {
 		loop: false,
 		slidesPerView: 1,
@@ -69,6 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		hamburger.classList.toggle("open");
 		homeNavbarMenu.classList.toggle("open");
 	 }
+	 // Modal window 
+
+	 MicroModal.init({
+		 awaitCloseAnimation: true,
+		 openTrigger: "data-micromodal-trigger",
+		 closeTrigger: "data-micromodal-close",
+		 openClass: "is-open"
+	 });
+
+	 // Replace Svg
 
 	const replaceSvgImagesToSvgInline = (query, callback) => {
 		document.querySelectorAll(query).forEach((image) => {

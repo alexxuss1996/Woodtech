@@ -53,10 +53,16 @@ img {
   }
 }
 
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+}
+
 .scroll-top__btn {
   display: none;
   position: fixed;
-  z-index: 999;
+  z-index: 9;
   display: block;
   opacity: 0;
   cursor: pointer;
@@ -100,6 +106,14 @@ img {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+
+.main__bold-title {
+  font-size: 24px;
+  color: $text-color;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .heading__bold-title {
   font-weight: 800;
   font-size: 29px;
@@ -112,6 +126,15 @@ img {
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 20px;
+}
+
+.section__description {
+  max-width: 550px;
+  padding: 20px;
+  color: $text-light-color;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .bt-line-decored {
@@ -148,6 +171,10 @@ img {
   transition: all 0.3s ease;
   background-color: $light-disabled;
   border-radius: 50%;
+}
+
+.grid-row-2x {
+  grid-row-start: span 2;
 }
 
 .corner {
@@ -459,7 +486,7 @@ img {
   top: 30px;
   right: 30px;
   display: none;
-  z-index: 10;
+  z-index: 5;
   &.innerpage {
     .bar {
       background-color: $middle-gray;
@@ -606,6 +633,68 @@ img {
   }
   .call__button {
     align-self: flex-end;
+  }
+}
+
+/*-----------------------Trust Section Modal--------------------------*/
+
+.modal__container {
+  button {
+    outline: none;
+    cursor: pointer !important;
+  }
+  h2.modal__title {
+    color: #595959;
+  }
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  font-size: 24px;
+}
+
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__btn {
+  padding: 10px 15px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+
+/*-----------------Modal Media Queries--------------------*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .modal__container {
+    width: 90% !important;
+    min-width: 90% !important;
+  }
+
+  @supports (display: flex) {
+    .modal__container {
+      width: 90% !important;
+      min-width: 90% !important;
+    }
   }
 }
 
@@ -1126,6 +1215,13 @@ img {
   }
 }
 
+/*------------------PROJECTS PAGE----------------*/
+/*------------------Projects Section-------------*/
+.s-projects {
+  text-align: center;
+}
+
+/*-----------------Media Queries----------------*/
 @media screen and (max-width: 1199px) {
   .home-header__slider {
     .home-header-slider__controls {

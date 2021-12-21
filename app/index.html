@@ -107,10 +107,38 @@
 					Позвоните нам или оставьте заявку с сайта. Мы перезвоним вам в течение 10 минут.
 				</p>
 				<a href="tel:+74992467532" class="call__phone-number">+7 (499) 246-75-32</a>
-				<a href="#" class="call__button button">Оформить заявку сейчас</a>
+				<a data-micromodal-trigger="modal-1" href="javascript:void(0);" class="call__button button">Оформить заявку сейчас</a>
 			</div>
 		</div>
 	</div>
+
+
+	<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+				<header class="modal__header">
+					<h2 class="modal__title">
+						Оставить заявку 
+					</h2>
+					<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+				</header>
+				<div class="modal-content-content">
+					<div class="modal__content">
+						<form>
+							<input type="text">
+							<input type="text">
+							<textarea name="" id="" rows="4"></textarea>
+						</form>
+					</div>
+					<footer class="modal__footer">
+						<button class="modal__btn button" data-micromodal-close aria-label="Close this dialog window">Отправить</button>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </section>
 <section class="s-bestworks">
 	<div class="bestworks__content">
