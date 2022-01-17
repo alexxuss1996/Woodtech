@@ -1,9 +1,9 @@
-import {Swiper, Pagination, Navigation, Scrollbar} from 'swiper';
+import {Swiper, Pagination, Navigation, Scrollbar, FreeMode, Thumbs} from 'swiper';
 import MicroModal from 'micromodal';
 Swiper.use([Pagination, Navigation, Scrollbar]);
 document.addEventListener('DOMContentLoaded', () => {
 // Sliders
-	const homeHeaderSlider = new Swiper('.home-header__slider', {
+	let homeHeaderSlider = new Swiper('.home-header__slider', {
 		loop: false,
 		slidesPerView: 1,
 		speed: 2000,
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 
-	const homeBlogSlider = new Swiper('.home-blog__slider', {
+	let homeBlogSlider = new Swiper('.home-blog__slider', {
 		loop: true,
 		speed: 1500,
 		slidesPerView: 1,
@@ -44,6 +44,32 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: '.blog-slider__pagination',
 			type: 'bullets',
 			clickable: true
+		}
+	});
+
+	// Project Gallery 
+	let galleryThumbs = new Swiper('.gallery__thumbs', {
+		modules: [FreeMode],
+		spaceBetween: 5,
+		slidesPerView: 7.5,
+		slideToClickedSlide: true,
+		watchSlidesProgress: true,
+		freeMode: {
+			enabled: true,
+			momentum: false,
+			minimumVelocity: 0.2
+		},
+		loop: true
+	});
+	let galleryTop = new Swiper('.gallery__top', {
+		modules: [Thumbs],
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
 		}
 	});
 
