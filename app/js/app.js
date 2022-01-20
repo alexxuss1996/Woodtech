@@ -51,7 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	let galleryThumbs = new Swiper('.gallery__thumbs', {
 		modules: [FreeMode],
 		spaceBetween: 5,
-		slidesPerView: 7.5,
+		slidesPerView: 4,
+		breakpoints: {
+			1199: {
+				slidesPerView: 7.5
+			},
+			991: {
+				slidesPerView: 6
+			}
+		},
 		slideToClickedSlide: true,
 		watchSlidesProgress: true,
 		freeMode: {

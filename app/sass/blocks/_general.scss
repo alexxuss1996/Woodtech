@@ -112,7 +112,6 @@ form textarea {
 
 .main__bold-title {
   font-size: 24px;
-  color: $text-color;
   font-weight: 800;
   text-transform: uppercase;
 }
@@ -267,7 +266,6 @@ form textarea {
 }
 
 .item__title {
-  color: $text-color;
   font-size: 18px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -941,12 +939,6 @@ form textarea {
     }
   }
   .about__articles {
-    color: $text-color;
-    .articles__heading {
-      .heading__bold-title {
-        color: $text-color;
-      }
-    }
     .articles__decoration-dots {
       display: flex;
       justify-content: space-between;
@@ -958,7 +950,6 @@ form textarea {
     }
     .articles__description {
       font-size: 15px;
-      color: $text-color;
       font-weight: 400;
       line-height: 24px;
     }
@@ -978,7 +969,6 @@ form textarea {
 
       .about-article__title {
         margin: 0;
-        color: $text-color;
         font-size: 19px;
         font-family: "Raleway", sans-serif;
         font-weight: 800;
@@ -1150,7 +1140,6 @@ form textarea {
       margin-top: 22px;
     }
     .blog-item__description {
-      color: $text-color;
       padding: 0 13px;
       margin: 17px 0;
     }
@@ -1424,6 +1413,92 @@ form textarea {
   }
 }
 
+.project__inner-content {
+  padding-top: 0;
+  .project__info {
+    .info__text {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+    .info__img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .project__sidebar {
+    padding: 15px 0;
+    text-align: center;
+    .author__bio,
+    .author__role,
+    .author__name {
+      font-size: 16px;
+    }
+    .author__role,
+    .details__title {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+    .author__name {
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
+    .author__photo {
+      margin: 25px 0 35px;
+      .photo__img {
+        display: block;
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        border: 5px solid $light-disabled;
+        border-radius: 500px;
+        margin: 0 auto;
+      }
+    }
+    .author__bio {
+      margin-bottom: 40px;
+    }
+  }
+  .project__detail-info {
+    background-color: $light-bg;
+    padding: 40px 28px;
+    .project__parameters {
+      .parameter {
+        font-size: 14px;
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        &__name {
+          font-weight: 500;
+          order: 1;
+        }
+        &__value {
+          font-weight: 700;
+          order: 3;
+        }
+        &::after {
+          content: "";
+          background-image: radial-gradient(circle, #ccc 1px, transparent 1.5px);
+          background-position: bottom;
+          background-size: 1ex 3.5px;
+          background-repeat: space no-repeat;
+          flex-grow: 1;
+          height: 1.125em;
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+.project__main-title {
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+}
+
 /*-----------------Media Queries----------------*/
 @media screen and (max-width: 1199px) {
   .home-header__slider {
@@ -1608,6 +1683,20 @@ form textarea {
       .header-slider__scrollbar {
         display: none;
       }
+    }
+  }
+  .project__top-line {
+    flex-direction: column;
+    .project__breadcrumbs,
+    .item__location {
+      width: 100%;
+    }
+    .project__breadcrumbs {
+      margin-bottom: 15px;
+    }
+    .item__location,
+    .item__address {
+      margin-bottom: 0;
     }
   }
 }
