@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Project Gallery 
 	let galleryThumbs = new Swiper('.gallery__thumbs', {
 		modules: [FreeMode],
+		speed: 1500,
 		spaceBetween: 5,
 		slidesPerView: 4,
 		breakpoints: {

@@ -53,6 +53,10 @@ img {
   }
 }
 
+.section-header {
+  text-align: center;
+}
+
 form input,
 form textarea {
   border: 1px solid $text-light-color;
@@ -275,6 +279,15 @@ form textarea {
 .left-border {
   padding-left: 10px;
   border-left: 3px solid $accent;
+}
+
+.items__button-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: $light-bg;
+  margin-top: 3%;
 }
 
 /*------------------Header------------------*/
@@ -867,13 +880,6 @@ form textarea {
           transition: all 0.3s ease;
         }
       }
-    }
-    .items__button-wrapper {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      width: 100%;
-      margin-top: 3%;
     }
   }
 }
@@ -1497,6 +1503,14 @@ form textarea {
   font-weight: 800;
   font-size: 30px;
   text-align: center;
+}
+
+.s-services {
+  padding-bottom: 0;
+
+  .items__button-wrapper {
+    padding: 4% 0;
+  }
 }
 
 /*-----------------Media Queries----------------*/
