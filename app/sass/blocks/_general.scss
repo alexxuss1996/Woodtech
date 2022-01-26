@@ -1575,6 +1575,24 @@ form textarea {
   }
 }
 
+.main-img__wrapper {
+  border: 1px solid $light-disabled;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.content-text {
+  margin: 30px 0;
+}
+.content-img {
+  margin: 20px 0;
+}
+.content-img,
+.main__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
 
 
 /*-----------------Media Queries----------------*/
