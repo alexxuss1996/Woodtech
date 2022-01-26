@@ -358,6 +358,7 @@ form textarea {
   .home-header-slider__controls {
     padding: 15px 10px 10px;
     display: flex;
+    justify-content: stretch;
     align-items: center;
     position: relative;
     z-index: 3;
@@ -396,6 +397,8 @@ form textarea {
   .header-slider__scrollbar {
     height: 5px;
     width: 50%;
+    position: absolute;
+    left: 22.5%;
     background-color: #1a1c20;
     .swiper-scrollbar-drag {
       cursor: pointer;
@@ -1581,7 +1584,8 @@ form textarea {
       width: 35%;
       left: 45%;
       .header-slider__scrollbar {
-        width: 45%;
+        width: 40%;
+        left: 30%;
       }
     }
   }
