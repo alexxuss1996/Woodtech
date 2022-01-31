@@ -14,4 +14,4 @@ For production build run:
 ```bash
 gulp build
 ```
-Site uses browsersync-ssi plugin for including html parts.
+Development build uses browsersync-ssi plugin for including html parts.
