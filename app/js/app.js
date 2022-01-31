@@ -1,5 +1,6 @@
 import {Swiper, Pagination, Navigation, Scrollbar, FreeMode, Thumbs} from 'swiper';
 import MicroModal from 'micromodal';
+import * as basicLightbox from 'basiclightbox';
 Swiper.use([Pagination, Navigation, Scrollbar]);
 document.addEventListener('DOMContentLoaded', () => {
 // Sliders
@@ -112,6 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		 closeTrigger: "data-micromodal-close",
 		 openClass: "is-open"
 	 });
+
+	 // Image modal
+	document.querySelector(".modal-img-wrapper").onclick = () => {
+		basicLightbox.create(`
+		<img src="images/dist/other/about-installation.jpg">
+		`).show();
+	 }
+	 
 
 	 // Replace Svg
 

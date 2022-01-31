@@ -1462,8 +1462,7 @@ form textarea {
     .author__name {
       font-size: 16px;
     }
-    .author__role,
-    .details__title {
+    .author__role {
       text-transform: uppercase;
       font-size: 16px;
       font-weight: 800;
@@ -1526,6 +1525,13 @@ form textarea {
   font-weight: 800;
   font-size: 30px;
   text-align: center;
+}
+
+.details__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 /*------------------Services Page----------------*/
@@ -1656,6 +1662,11 @@ form textarea {
     }
 
   }
+}
+
+/*------------------About Page----------------*/
+.s-about__content {
+  padding-top: 0;
 }
 
 /*-----------------Media Queries----------------*/
