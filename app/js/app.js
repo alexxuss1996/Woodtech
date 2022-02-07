@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	let homeBlogSlider = new Swiper('.home-blog__slider', {
 		loop: true,
-		speed: 1500,
+		speed: 1000,
 		slidesPerView: 1,
 		spaceBetween: 20,
 		breakpoints: {
@@ -114,14 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		 openClass: "is-open"
 	 });
 
-	 // Image modal
-	document.querySelector(".modal-img-wrapper").onclick = () => {
-		basicLightbox.create(`
-		<img src="images/dist/other/about-installation.jpg">
-		`).show();
-	 }
-	 
-
 	 // Replace Svg
 
 	const replaceSvgImagesToSvgInline = (query, callback) => {
@@ -171,4 +163,23 @@ document.addEventListener('DOMContentLoaded', () => {
 			behavior: "smooth"
 		})
 	})
-})
+
+ // Image modal
+
+ const modalImg = document.querySelector(".modal-img-wrapper");
+ const instance =  basicLightbox.create(`
+ <img src="images/dist/other/about-installation.jpg">
+ `);
+
+ function showModalImg () {
+	 instance.show()
+ }
+
+ if(modalImg) {
+	modalImg.addEventListener("click", showModalImg);
+ }
+	
+});
+
+
+	
