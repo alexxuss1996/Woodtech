@@ -80,6 +80,13 @@ svg path {
   font-weight: 800;
 }
 
+.partner__title {
+  color: $accent;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
 .button {
   display: inline-block;
   border: none;
@@ -134,8 +141,6 @@ svg path {
   background-color: transparent;
   margin-bottom: 15px;
   position: relative;
-  overflow: visible;
-  -webkit-appearance: none;
 }
 
 form input,
@@ -1791,6 +1796,49 @@ form textarea {
   }
 }
 
+.partners__wrapper {
+  margin: 4% 0;
+  .partner__item {
+    display: flex;
+  }
+}
+
+.partner__text {
+  .partner__description {
+    margin-bottom: 2rem;
+  }
+}
+
+.item-logo__wrapper {
+  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+  min-height: 90px;
+  margin-right: 20px;
+  background-color: $dark;
+  border-radius: $even-corners;
+  .partner__logo {
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+    max-width: 82.5%;
+  }
+  .partner__logo[alt="milano"] {
+    width: 106px;
+  }
+  .partner__logo[alt="mazzucato"] {
+    width: 130px;
+  }
+  .partner__logo[alt="fanfani"] {
+    width: 130px;
+  }
+  .partner__logo[alt="cappelini"] {
+    width: 80px;
+  }
+}
+
 /*-----------------Media Queries----------------*/
 @media screen and (max-width: 1199px) {
   .home-header__slider {
@@ -2019,6 +2067,15 @@ form textarea {
   }
   .bt-gray {
     border-color: transparent;
+  }
+
+  .partner__text {
+    .partner__description {
+      margin-bottom: 1rem;
+    }
+  }
+  .item-logo__wrapper {
+    display: none;
   }
 }
 
