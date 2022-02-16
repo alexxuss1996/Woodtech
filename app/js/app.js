@@ -1,6 +1,17 @@
 import {Swiper, Pagination, Navigation, Scrollbar, FreeMode, Thumbs} from 'swiper';
 import MicroModal from 'micromodal';
 import * as basicLightbox from 'basiclightbox';
+
+import Map from 'ol/Map.js';
+import View from 'ol/View.js';
+import OSM from 'ol/source/OSM.js';
+import Feature from 'ol/Feature.js';
+import {fromLonLat} from 'ol/proj.js';
+import Point from 'ol/geom/Point.js';
+import VectorSource from 'ol/source/Vector.js';
+import {Icon, Style} from 'ol/style.js';
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
+
 Swiper.use([Pagination, Navigation, Scrollbar]);
 document.addEventListener('DOMContentLoaded', () => {
 // Sliders
@@ -178,6 +189,42 @@ document.addEventListener('DOMContentLoaded', () => {
  if(modalImg) {
 	modalImg.addEventListener("click", showModalImg);
  }
+
+ // Contacts Map
+
+ const iconFeature = new Feature({
+	geometry: new Point(fromLonLat([30.520784, 50.447532])),
+	name: "Woodtech"
+ })
+
+ const map = new Map({
+  target: 'map',
+  layers: [
+    new TileLayer({
+      source: new OSM()
+    }),
+		new VectorLayer({
+			source: new VectorSource({
+				features: [iconFeature]
+			}),
+			style: new Style({
+				image: new Icon({
+					anchor: [0.5, 46],
+          anchorXUnits: 'fraction',
+          anchorYUnits: 'pixels',
+          src: 'https://cdn.mapmarker.io/api/v1/font-awesome/v5/pin?icon=fa-star-solid&size=50&hoffset=0&voffset=-1'
+				})
+			})
+		})
+  ],
+  view: new View({
+    center: fromLonLat([30.520784, 50.447532]),
+    zoom: 15,
+		maxZoom: 18,
+		constrainOnlyCenter: true
+  })
+});
+
 	
 });
 

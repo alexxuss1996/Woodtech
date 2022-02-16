@@ -37,6 +37,11 @@ img {
   border-top: 1px solid #e7e7e8;
 }
 
+.bg-dark {
+  color: #fff;
+  background-color: $dark;
+}
+
 .svg-icon {
   position: relative;
   height: auto;
@@ -145,11 +150,15 @@ svg path {
 
 form input,
 form textarea {
-  border: 1px solid $text-light-color;
+  border-radius: $even-corners;
+  border: 1px solid $light-disabled;
   display: block;
   width: 100%;
-  margin: 8px 0;
-  padding: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  &::placeholder {
+    color: #888;
+  }
 }
 
 .scroll-top__btn {
@@ -743,21 +752,22 @@ form textarea {
   .call__description {
     margin-bottom: 10px;
   }
-  .call__phone-number {
-    text-decoration: none;
-    font-size: 2.2em;
-    color: #fff;
-    font-family: "Roboto" sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-    &:hover {
-      color: #e7e7e7;
-    }
-  }
   .call__button {
     align-self: flex-end;
+  }
+}
+
+.call__phone-number {
+  text-decoration: none;
+  font-size: 2.2em;
+  color: #fff;
+  font-family: "Roboto" sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  &:hover {
+    color: #e7e7e7;
   }
 }
 
@@ -802,7 +812,11 @@ form textarea {
   color: rgba(0, 0, 0, 0.8);
   .modal__form input,
   .modal__form textarea {
-    border-color: $text-light-color;
+    border-color: $light-disabled;
+    &:active,
+    &:focus {
+      border-color: $accent;
+    }
   }
 }
 
@@ -1839,6 +1853,103 @@ form textarea {
   }
 }
 
+/*------------------Feedback Page----------------*/
+.feedback__form {
+  .feedback__input,
+  .feedback__textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: $even-corners;
+    border-color: $light-disabled;
+    transition: all 0.3s ease;
+    &::placeholder {
+      color: #888;
+    }
+    &:active,
+    &:focus {
+      border-color: $accent;
+    }
+  }
+  .feedback__textarea {
+    margin-bottom: 30px;
+  }
+  .feedback__button {
+    display: block;
+    margin: 0 auto;
+    width: 67%;
+  }
+}
+
+.s-contacts {
+  text-align: center;
+  border-bottom: 5px solid #2d3137;
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2% 0 3%;
+    .contacts__location {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 0;
+      .contacts__map-marker {
+        margin-right: 8px;
+        align-self: start;
+        width: 12px;
+        height: auto;
+      }
+      .contacts__address {
+        color: #989da5;
+        letter-spacing: 2px;
+        font-size: 15px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.map {
+  height: 550px;
+  .ol-zoom {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    .ol-zoom-in,
+    .ol-zoom-out {
+      border: 2px solid $middle-gray;
+      margin-right: 8px;
+    }
+  }
+  .ol-attribution {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    button[title="Attributions"] {
+      display: none;
+      border: 1px solid $light-disabled;
+    }
+    ul {
+      background-color: rgba(#fff, 0.75);
+      padding: 0 5px;
+      li {
+        color: #9c9c9c;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+  .ol-rotate {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid $dark-div;
+  }
+}
+
 /*-----------------Media Queries----------------*/
 @media screen and (max-width: 1199px) {
   .home-header__slider {
@@ -2030,6 +2141,12 @@ form textarea {
   }
   .blog__posts {
     grid-template-columns: 1fr;
+  }
+
+  .feedback__form {
+    .feedback__button {
+      width: 100%;
+    }
   }
 }
 
