@@ -385,6 +385,58 @@ form textarea {
   margin-top: 3%;
 }
 
+/*------------------LOADER------------------*/
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: $deep-dark;
+  transition: all 0.3s ease-in-out 0.2s;
+  z-index: 98;
+  &-finish {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &-circle {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 99;
+    margin-right: -50%;
+    margin-top: -60px;
+    border: 16px solid $dark;
+    border-radius: 50%;
+    border-top: 16px solid $accent;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*------------------Header------------------*/
 
 .home-header {
@@ -1668,7 +1720,7 @@ form textarea {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  margin: 20px 0;
+  margin: 20px 0 45px;
 }
 
 .pagination {

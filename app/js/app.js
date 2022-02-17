@@ -13,7 +13,21 @@ import { Icon, Style } from "ol/style.js";
 import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer.js";
 
 Swiper.use([Pagination, Navigation, Scrollbar]);
-document.addEventListener("DOMContentLoaded", () => {
+
+// Loader
+
+const body = document.querySelector("body");
+const loaderContainer = document.createElement("div");
+const loaderCircle = document.createElement("div");
+loaderContainer.classList.add("loader");
+loaderCircle.classList.add("loader-circle");
+loaderContainer.appendChild(loaderCircle);
+body.insertAdjacentElement("afterbegin", loaderContainer);
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loaderContainer.classList.add("loader-finish");
+  }, 200);
   // Sliders
   let homeHeaderSlider = new Swiper(".home-header__slider", {
     loop: false,
@@ -189,47 +203,42 @@ document.addEventListener("DOMContentLoaded", () => {
     modalImg.addEventListener("click", showModalImg);
   }
 
+  // Company Page Tabs
 
-// Company Page Tabs
+  function initTabs(elem) {
+    //addEventListener on mouse click
+    document.addEventListener("click", function (e) {
+      //check is the right element clicked
+      if (!e.target.matches(`${elem} .tab-link`)) {
+        return;
+      } else {
+        if (!e.target.classList.contains("active")) {
+          //if option true remove active class from all other tab-link and tab
+          findActiveElementAndRemoveIt(`${elem} .tab-link`);
+          findActiveElementAndRemoveIt(`${elem} .tab`);
 
-function initTabs(elem) {
-  //addEventListener on mouse click
-  document.addEventListener("click", function (e) {
-    //check is the right element clicked
-    if (!e.target.matches(`${elem} .tab-link`)) {
-      return;
-    } else {
-      if (!e.target.classList.contains("active")) {
-        //if option true remove active class from all other tab-link and tab
-        findActiveElementAndRemoveIt(`${elem} .tab-link`);
-        findActiveElementAndRemoveIt(`${elem} .tab`);
+          //add active class on clicked tab
+          e.target.classList.add("active");
 
-        //add active class on clicked tab
-        e.target.classList.add("active");
-
-        
           const panel = document.querySelectorAll(`${elem}  .tab.${e.target.dataset.name}`);
           Array.prototype.forEach.call(panel, function (el) {
             //add active class on right t-panel
             el.classList.add("active");
           });
-        ;
+        }
       }
-    }
-  });
+    });
+  }
 
-}
+  //if option true remove active class from added element
+  function findActiveElementAndRemoveIt(elem) {
+    const elementList = document.querySelectorAll(elem);
+    Array.prototype.forEach.call(elementList, function (e) {
+      e.classList.remove("active");
+    });
+  }
 
-
-//if option true remove active class from added element
-function findActiveElementAndRemoveIt(elem) {
-  const elementList = document.querySelectorAll(elem);
-  Array.prototype.forEach.call(elementList, function (e) {
-    e.classList.remove("active");
-  });
-}
-
-initTabs(".s-company")
+  initTabs(".s-company");
 
   // Contacts Map
 
@@ -265,6 +274,4 @@ initTabs(".s-company")
       constrainOnlyCenter: true,
     }),
   });
-
-  
 });
