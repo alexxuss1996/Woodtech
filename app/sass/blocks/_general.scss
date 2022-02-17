@@ -1726,7 +1726,9 @@ form textarea {
 }
 
 /*------------------About Page----------------*/
-.s-about__content {
+.s-company__about,
+.s-company__benefits,
+.s-company__partners {
   padding: 0;
 }
 
@@ -1737,6 +1739,22 @@ form textarea {
 
 .company__tabs {
   padding-left: 36px;
+  .tab {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    height: 100%;
+    display: none;
+    visibility: hidden;
+    max-height: 100%;
+    &.active {
+      transition-delay: 0.2s;
+      height: auto;
+      max-height: 100%;
+      opacity: 1;
+      display: block;
+      visibility: visible;
+    }
+  }
 }
 
 .about__info {
