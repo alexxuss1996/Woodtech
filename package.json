@@ -11,7 +11,8 @@
   "license": "ISC",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist" 
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -25,6 +26,7 @@
     "browsersync-ssi": "^0.2.4",
     "cssnano": "^5.0.8",
     "del": "^6.0.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.3",
     "gulp-concat": "^2.6.1",
