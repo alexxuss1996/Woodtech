@@ -8,10 +8,14 @@ npm install
 To start local server, run:
 
 ```bash
-gulp
+npm start
 ```
 For production build run:
 ```bash
-gulp build
+npm build
+```
+For deploy  run:
+```bash
+npm deploy
 ```
 Development build uses browsersync-ssi plugin for including html parts.
