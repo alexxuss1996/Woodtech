@@ -14,20 +14,12 @@ import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer.js";
 
 Swiper.use([Pagination, Navigation, Scrollbar]);
 
-// Loader
-
-const body = document.querySelector("body");
-const loaderContainer = document.createElement("div");
-const loaderCircle = document.createElement("div");
-loaderContainer.classList.add("loader");
-loaderCircle.classList.add("loader-circle");
-loaderContainer.appendChild(loaderCircle);
-body.insertAdjacentElement("afterbegin", loaderContainer);
-
 window.addEventListener("load", () => {
+  // Loader
+  const loaderContainer = document.querySelector(".loader");
   setTimeout(() => {
     loaderContainer.classList.add("loader-finish");
-  }, 200);
+  }, 100);
   // Sliders
   let homeHeaderSlider = new Swiper(".home-header__slider", {
     loop: false,
@@ -138,7 +130,6 @@ window.addEventListener("load", () => {
     closeTrigger: "data-micromodal-close",
     openClass: "is-open",
   });
-
 
   // Scroll to top button
 
